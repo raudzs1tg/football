@@ -17,6 +17,7 @@ import {
   Pause,
   Heart,
   ArrowRight,
+  ArrowUpRight,
   SlidersHorizontal,
 } from 'lucide-react';
 import {
@@ -77,18 +78,18 @@ const CAMERA_SLIDE_PRESETS: Record<
   >
 > = {
   kits: {
-    // Slide 0: Exact Macro framing of Circular DFB/Atelier Crest, 4 3D Stars, Ribbed Collar & Geometric Jacquard
+    // Slide 0: Exact Macro framing of FC Bayern / DFB Collar, Inner Size Tag, Circular Crest, 5 Gold 3D Stars & Striped Jacquard
     0: {
-      camX: 0.24,
-      camY: 0.56,
-      camZ: 1.72,
-      lookX: 0.22,
-      lookY: 0.52,
-      rotX: 0.06,
-      rotY: -0.18,
+      camX: 0.11,
+      camY: 0.62,
+      camZ: 2.32,
+      lookX: 0.07,
+      lookY: 0.44,
+      rotX: 0.18,
+      rotY: -0.15,
       autoSpin: false,
       explode: 0,
-      label: '01. Cận Cảnh Macro Huy Hiệu & Vân Vải',
+      label: '01. Cận Cảnh Macro Cổ Viền Vàng, Huy Hiệu & 5 Sao 3D',
     },
     // Slide 1: Full 360° Sculpted Jersey
     1: {
@@ -244,11 +245,11 @@ const STAGE_SHOWCASE_META: Record<
   }
 > = {
   kits: {
-    kicker: 'DEUTSCHLAND · STADIO ATELIER',
-    title: 'DFB Heimtrikot 2024',
-    subtitle: 'Mehr als ein Trikot. Eine Nation. · 28-Gauge Jacquard',
+    kicker: 'FC BAYERN MÜNCHEN · AUTHENTIC PLAYER-ISSUE',
+    title: 'FC Bayern Heimtrikot 24/25',
+    subtitle: 'Rot & Weiß Checkered Jacquard · Gold-Piped Collar & 5 Sterne',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    defaultSizeIdx: 1,
+    defaultSizeIdx: 2,
   },
   balls: {
     kicker: 'FIFA QUALITY PRO · MATCH BALL',
@@ -307,7 +308,7 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
   const [selectedStageSizeIdx, setSelectedStageSizeIdx] = useState<
     Record<ProductCategory, number>
   >({
-    kits: 1, // 'M' selected by default just like the photo
+    kits: 2, // 'L' selected by default matching the inner collar size print in photo
     balls: 1,
     boots: 2,
     gloves: 2,
@@ -319,6 +320,22 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
     balls: 0,
     boots: 0,
     gloves: 0,
+  });
+  const [previewProductByCat, setPreviewProductByCat] = useState<
+    Record<ProductCategory, Product | null>
+  >({
+    kits: null,
+    balls: null,
+    boots: null,
+    gloves: null,
+  });
+  const [expandedChapters, setExpandedChapters] = useState<
+    Record<ProductCategory, boolean>
+  >({
+    kits: false,
+    balls: false,
+    boots: false,
+    gloves: false,
   });
 
   const [webglReady, setWebglReady] = useState<boolean>(true);
@@ -899,6 +916,7 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
 
   const handleSelectColorway = (cat: ProductCategory, idx: number) => {
     setSelectedColorwayIdx((prev) => ({ ...prev, [cat]: idx }));
+    setPreviewProductByCat((prev) => ({ ...prev, [cat]: null }));
     const ctx = sceneRef.current;
     if (!ctx) return;
     const preset = CATEGORY_COLORWAYS[cat][idx];
@@ -906,6 +924,26 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
       ctx.colorwayAppliers[cat](preset);
     }
   };
+
+  const handlePreviewProductOn3D = useCallback((product: Product) => {
+    setPreviewProductByCat((prev) => ({
+      ...prev,
+      [product.category]: product,
+    }));
+    const ctx = sceneRef.current;
+    if (!ctx) return;
+    const cw = product.colorway3D;
+    ctx.colorwayAppliers[product.category]({
+      id: cw.presetId || product.id,
+      name: product.name,
+      swatchHex: cw.swatchHex,
+      secondaryHex: cw.secondaryHex,
+      primaryColor: cw.primaryColor,
+      secondaryColor: cw.secondaryColor,
+      accentColor: cw.accentColor,
+      trimColor: cw.trimColor,
+    });
+  }, []);
 
   // Magnifying Glass Button (`🔍`) in bottom-right of viewport toggles Macro Zoom <-> Full 360°
   const handleToggleMacroLens = () => {
@@ -933,7 +971,11 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
   const handleSelectLayer = (layerId: string) => {
     setActiveLayerId(layerId);
     highlightLayer(activeCategory, layerId);
-    if (layerId === 'kit-crest' || layerId === 'kit-shell') {
+    if (
+      layerId === 'kit-crest' ||
+      layerId === 'kit-shell' ||
+      layerId === 'kit-collar'
+    ) {
       applyCameraSlide(activeCategory, 0, true);
     } else if (explodePercent < 35) {
       applyCameraSlide(activeCategory, 2, true);
@@ -991,9 +1033,34 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
   const currentColorways = CATEGORY_COLORWAYS[activeCategory];
   const activeColorwayIdx = selectedColorwayIdx[activeCategory] || 0;
 
-  const showcaseMeta = STAGE_SHOWCASE_META[activeCategory];
+  const baseShowcaseMeta = STAGE_SHOWCASE_META[activeCategory];
+  const previewedProduct = previewProductByCat[activeCategory];
   const stageProducts = PRODUCTS.filter((p) => p.category === activeCategory);
-  const primaryStageProduct = stageProducts[0] || PRODUCTS[0];
+  const primaryStageProduct =
+    previewedProduct || stageProducts[0] || PRODUCTS[0];
+
+  const showcaseMeta = previewedProduct
+    ? {
+        ...baseShowcaseMeta,
+        kicker: `${previewedProduct.sku} · ${previewedProduct.statusTag || previewedProduct.surfaceLabel}`,
+        title: previewedProduct.name,
+        subtitle: previewedProduct.subtitle,
+      }
+    : activeCategory === 'kits' && activeColorwayIdx === 1
+    ? {
+        ...baseShowcaseMeta,
+        kicker: 'DEUTSCHLAND · STADIO ATELIER',
+        title: 'DFB Heimtrikot 2024',
+        subtitle: 'Mehr als ein Trikot. Eine Nation. · 28-Gauge Jacquard',
+      }
+    : activeCategory === 'kits' && activeColorwayIdx === 2
+    ? {
+        ...baseShowcaseMeta,
+        kicker: 'MONTEBELLUNA · SERIES XI',
+        title: 'Maestro Royale Home Shirt',
+        subtitle: 'Midnight Navy & 24K Gold Piping · 142g Jacquard',
+      }
+    : baseShowcaseMeta;
   const activeSizeIdx = selectedStageSizeIdx[activeCategory] ?? 1;
   const isStageProductAdded = quickAddedId === primaryStageProduct.id;
 
@@ -1281,10 +1348,23 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
               {showcaseMeta.subtitle}
             </p>
 
-            <div className="mt-3 flex items-baseline justify-between gap-2">
-              <span className="text-lg font-bold text-stone-950 font-mono-tabular">
-                ${primaryStageProduct.price}.00
-              </span>
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-2.5">
+                <span className="text-lg font-bold text-stone-950 font-mono-tabular">
+                  ${primaryStageProduct.price}.00
+                </span>
+                {primaryStageProduct.externalUrl && (
+                  <a
+                    href={primaryStageProduct.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-0.5 rounded bg-stone-100 hover:bg-stone-200 text-[11px] font-semibold text-stone-700 inline-flex items-center gap-1 transition-colors"
+                  >
+                    <span>Google Shopping</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                )}
+              </div>
               <button
                 type="button"
                 onClick={() => setShowCadDrawer((prev) => !prev)}
@@ -1526,26 +1606,88 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
                   </div>
                 </div>
 
+                {/* Quick 3D Model Product Selector Strip for all products in this chapter */}
+                <div className="mt-5">
+                  <div className="flex items-center justify-between text-xs text-stone-500 mb-2">
+                    <span className="font-semibold text-stone-800">
+                      Chọn mẫu thử nhanh trên sân khấu 3D ({chapterProducts.length} mẫu):
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setExpandedChapters((prev) => ({
+                          ...prev,
+                          [chapter.id]: !prev[chapter.id],
+                        }))
+                      }
+                      className="text-xs font-semibold text-rose-700 hover:underline cursor-pointer"
+                    >
+                      {expandedChapters[chapter.id]
+                        ? 'Thu gọn danh sách (6 mẫu)'
+                        : `Xem toàn bộ ${chapterProducts.length} mẫu`}
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {chapterProducts.map((prod) => {
+                      const isPreviewed =
+                        previewProductByCat[chapter.id]?.id === prod.id;
+                      return (
+                        <button
+                          key={prod.id}
+                          type="button"
+                          onClick={() => {
+                            if (!isCurrentChapter) {
+                              onSelectCategory(chapter.id, false);
+                            }
+                            setTimeout(() => handlePreviewProductOn3D(prod), 30);
+                          }}
+                          className={`px-2.5 py-1.5 rounded-lg border text-[11px] font-medium inline-flex items-center gap-1.5 transition-colors cursor-pointer ${
+                            isPreviewed
+                              ? 'bg-stone-900 text-white border-stone-900 font-semibold'
+                              : 'bg-[#F9F8F6] text-stone-700 border-stone-200 hover:border-stone-400'
+                          }`}
+                        >
+                          <span
+                            className="w-2.5 h-2.5 rounded-full shrink-0 border border-black/15"
+                            style={{
+                              background: `linear-gradient(135deg, ${prod.colorway3D.swatchHex} 55%, ${prod.colorway3D.secondaryHex} 55%)`,
+                            }}
+                          />
+                          <span className="max-w-[180px] truncate">
+                            {prod.name}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
                 {/* Dedicated Product Cards for this Separated Category */}
                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {chapterProducts.map((product, prodIdx) => {
+                  {(expandedChapters[chapter.id]
+                    ? chapterProducts
+                    : chapterProducts.slice(0, 6)
+                  ).map((product) => {
                     const isQuickAdded = quickAddedId === product.id;
+                    const isPreviewedOnStage =
+                      previewProductByCat[chapter.id]?.id === product.id;
                     return (
                       <article
                         key={product.id}
                         onMouseEnter={() => {
                           if (isCurrentChapter) {
-                            handleSelectColorway(
-                              chapter.id,
-                              prodIdx % CATEGORY_COLORWAYS[chapter.id].length
-                            );
+                            handlePreviewProductOn3D(product);
                           }
                         }}
                         onClick={() => onSelectProduct(product)}
-                        className="group bg-[#F9F8F6] border border-stone-200 rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md cursor-pointer"
+                        className={`group bg-[#F9F8F6] border rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md cursor-pointer ${
+                          isPreviewedOnStage && isCurrentChapter
+                            ? 'border-stone-900 ring-1 ring-stone-900/15'
+                            : 'border-stone-200'
+                        }`}
                       >
                         <div>
-                          <div className="aspect-4/3 w-full bg-[#F2F0EC] overflow-hidden">
+                          <div className="aspect-4/3 w-full bg-[#F2F0EC] overflow-hidden relative">
                             <ResilientImage
                               src={product.image}
                               alt={product.name}
@@ -1553,6 +1695,30 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
                               fallbackTitle={product.name}
                               fallbackSubtitle={product.subtitle}
                             />
+                            {/* Colorway Swatch Badge on Top-Left of Product Card */}
+                            <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs border border-stone-200/80 flex items-center gap-1.5 text-[11px] font-semibold text-stone-800 shadow-2xs">
+                              <span
+                                className="w-3 h-3 rounded-full border border-stone-300"
+                                style={{
+                                  background: `linear-gradient(135deg, ${product.colorway3D.swatchHex} 55%, ${product.colorway3D.secondaryHex} 55%)`,
+                                }}
+                              />
+                              <span>{product.sku}</span>
+                            </div>
+
+                            {product.externalUrl && (
+                              <a
+                                href={product.externalUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                title="Xem trên Google Shopping"
+                                className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-stone-900/85 hover:bg-stone-950 text-white text-[11px] font-medium inline-flex items-center gap-1 backdrop-blur-xs transition-colors"
+                              >
+                                <span>Shopping</span>
+                                <ArrowUpRight className="w-3 h-3" />
+                              </a>
+                            )}
                           </div>
 
                           <div className="p-5">
@@ -1568,7 +1734,7 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
                             </div>
 
                             <div className="mt-1.5 flex items-baseline justify-between gap-3">
-                              <h4 className="text-base font-semibold text-stone-900 group-hover:text-rose-700 transition-colors">
+                              <h4 className="text-base font-semibold text-stone-900 group-hover:text-rose-700 transition-colors line-clamp-2">
                                 {product.name}
                               </h4>
                               <span className="text-[15px] font-semibold text-stone-900 font-mono-tabular shrink-0">
@@ -1623,6 +1789,25 @@ export const ThreeGearStage: React.FC<ThreeGearStageProps> = ({
                     );
                   })}
                 </div>
+
+                {chapterProducts.length > 6 && (
+                  <div className="mt-6 flex justify-center">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setExpandedChapters((prev) => ({
+                          ...prev,
+                          [chapter.id]: !prev[chapter.id],
+                        }))
+                      }
+                      className="px-5 py-2.5 rounded-lg border border-stone-300 bg-[#F9F8F6] hover:border-stone-900 text-xs font-semibold text-stone-900 transition-colors cursor-pointer"
+                    >
+                      {expandedChapters[chapter.id]
+                        ? `Thu gọn bớt danh sách (${chapter.titleVi})`
+                        : `Hiển thị đầy đủ ${chapterProducts.length} mẫu ${chapter.titleVi} →`}
+                    </button>
+                  </div>
+                )}
               </div>
             );
           })}

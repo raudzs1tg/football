@@ -38,38 +38,42 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
     {
       id: 'kit-crest',
       code: 'L01',
-      nameVi: 'Huy Hiệu Dệt Nổi & 4 Sao Thêu 3D',
-      nameEn: '3D Woven Crest & 4 Embroidered Stars',
-      material: 'High-Density Satin Stitch + TPU Relief',
-      metric: '0.8 mm Tactile Relief',
-      detail: 'Huy hiệu tròn đa vòng sắc nét kết hợp 4 ngôi sao 5 cánh thêu nổi 3D bắt sáng theo góc nhìn.',
+      nameVi: 'Huy Hiệu Thêu Nổi & 5 Sao Vàng 3D',
+      nameEn: 'FC Bayern Woven Crest & 5 Gold Stars',
+      material: 'High-Density Satin Stitch + Metallic Gold Thread',
+      metric: '0.9 mm Tactile Relief',
+      detail:
+        'Huy hiệu tròn thêu nổi sắc nét với họa tiết kim cương Bavaria xanh-trắng ở tâm cùng 5 ngôi sao vàng kim 3D xếp vòng cung.',
     },
     {
       id: 'kit-shell',
       code: 'L02',
-      nameVi: 'Vải Dệt Nổi Jacquard Hình Học 28-Gauge',
-      nameEn: 'Geometric Embossed Jacquard Knit',
-      material: 'Hydrophobic Micro-Filament PES',
+      nameVi: 'Vải Jacquard Sọc Đỏ & Ô Vuông Vi Điểm',
+      nameEn: 'Checkered Vertical Stripe Jacquard Knit',
+      material: 'Hydrophobic Micro-Filament PES (HEAT.RDY)',
       metric: '142 g · 410 mm/s Airflow',
-      detail: 'Họa tiết tam giác & kim cương dập nổi nguyên khối trên bề mặt vải kèm viền cổ dệt gân 2x2.',
+      detail:
+        'Sọc đứng đỏ đô đan xen cấu trúc ô vuông caro vi điểm siêu thoáng khí, tạo hiệu ứng bắt sáng chiều sâu tự nhiên.',
     },
     {
-      id: 'kit-core',
+      id: 'kit-collar',
       code: 'L03',
-      nameVi: 'Lõi Thoát Nhiệt Lồng Ngực & Lưới Hông',
-      nameEn: 'Thoracic Thermal Vent & Mesh Gusset',
-      material: 'Open-Cell Diamond Capillary Mesh',
-      metric: '3.4x Moisture Evacuation',
-      detail: 'Mảng lưới mắt cáo thoáng khí ở sườn áo và rãnh thoát nhiệt cột sống giúp hạ nhiệt nhanh.',
+      nameVi: 'Cổ Áo Viền Vàng Kim & Nhãn Size Nhiệt',
+      nameEn: 'Gold-Piped V-Collar & Inner Neck Stamp',
+      material: '2x2 Ribbed Knit + Metallic Gold Piping',
+      metric: 'Zero-Chafe Neckline',
+      detail:
+        'Cổ áo dệt gân trắng viền chỉ vàng kim sang trọng kèm nhãn thông số size (L · UK/US/EU) ép nhiệt phẳng bên trong gáy.',
     },
     {
       id: 'kit-sleeves',
       code: 'L04',
-      nameVi: 'Tay Áo Raglan Khí Động Học',
-      nameEn: 'Articulated Raglan Sleeves',
-      material: '4-Way Stretch Elastane Knit',
-      metric: 'Zero-Chafe Ultrasonic Seam',
-      detail: 'Đường ép nhiệt siêu âm phẳng và cắt chéo Raglan giải phóng hoàn toàn biên độ xoay khớp vai.',
+      nameVi: 'Tay Áo Raglan, 3 Sọc Vai & Ngực Áo TPU',
+      nameEn: 'Raglan Sleeves, 3 Shoulder Stripes & Sponsor TPU',
+      material: '4-Way Stretch Knit + 3D Heat-Applied TPU',
+      metric: 'Ultrasonic Flat-Weld',
+      detail:
+        '3 sọc trắng chạy dọc cầu vai kết hợp logo ngực và biểu tượng chữ T ép nhiệt 3D đàn hồi theo chuyển động cơ ngực.',
     },
   ],
   balls: [
@@ -80,7 +84,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'Thermally Bonded Aero Panels',
       material: 'Micro-Dimpled PU Shell',
       metric: '0.0% Water Uptake',
-      detail: 'Các tấm vỏ đa diện tích hợp rãnh vi điểm 0.4mm giúp ổn định lớp biên không khí ở vận tốc >95 km/h.',
+      detail:
+        'Các tấm vỏ đa diện tích hợp rãnh vi điểm 0.4mm giúp ổn định lớp biên không khí ở vận tốc >95 km/h.',
     },
     {
       id: 'ball-foam',
@@ -89,7 +94,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'EPDM Nitrogen-Cell Foam Cage',
       material: '4.0 mm Cross-Linked EPDM Foam',
       metric: '98.2% Rebound Consistency',
-      detail: 'Lớp bọt khí nitơ kín hấp thụ xung lực và duy trì độ nảy chuẩn FIFA từ -5°C đến +35°C.',
+      detail:
+        'Lớp bọt khí nitơ kín hấp thụ xung lực và duy trì độ nảy chuẩn FIFA từ -5°C đến +35°C.',
     },
     {
       id: 'ball-carcass',
@@ -98,7 +104,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'Geodesic Filament Winding Matrix',
       material: 'High-Tenacity Polyester Twill',
       metric: '< 1.1% Sphericity Deviation',
-      detail: 'Khung sợi căng đa trục giữ độ tròn tuyệt đối sau hơn 2,000 cú sút ở vận tốc cao.',
+      detail:
+        'Khung sợi căng đa trục giữ độ tròn tuyệt đối sau hơn 2,000 cú sút ở vận tốc cao.',
     },
     {
       id: 'ball-bladder',
@@ -107,7 +114,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'Carbon-Latex Bladder Core',
       material: 'Natural Latex + Carbon Black + Butyl Valve',
       metric: '< 4.0% Pressure Loss / 72h',
-      detail: 'Ruột bóng pha hạt carbon siêu đàn hồi cùng van khóa khí kép chống rò rỉ áp suất.',
+      detail:
+        'Ruột bóng pha hạt carbon siêu đàn hồi cùng van khóa khí kép chống rò rỉ áp suất.',
     },
   ],
   boots: [
@@ -118,7 +126,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'Hydrophobic Fly-Weave & Grip Ribs',
       material: '1.15 mm Micro-Filament + 0.08 mm Grip Skin',
       metric: '0.2% Water Uptake',
-      detail: 'Vân nổi khí động học ở má trong và mu bàn chân tăng tốc độ xoáy bóng trong điều kiện sân ướt.',
+      detail:
+        'Vân nổi khí động học ở má trong và mu bàn chân tăng tốc độ xoáy bóng trong điều kiện sân ướt.',
     },
     {
       id: 'boot-heel',
@@ -127,7 +136,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'External Calcaneus Carbon Lock',
       material: 'Forged Carbon Composite + Suede Pods',
       metric: 'Zero Internal Heel Slip',
-      detail: 'Ôm trọn xương gót chân và gân Achilles, chống lật cổ chân khi đổi hướng đột ngột ở góc gắt.',
+      detail:
+        'Ôm trọn xương gót chân và gân Achilles, chống lật cổ chân khi đổi hướng đột ngột ở góc gắt.',
     },
     {
       id: 'boot-insole',
@@ -136,7 +146,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'Anatomical Dual-Density Footbed',
       material: 'Pebax Foam + Forefoot Flex Channels',
       metric: '-32% Peak Stud Pressure',
-      detail: 'Thiết kế uốn lượn theo vòm bàn chân kết hợp đệm giảm chấn gót và rãnh gập xương bàn chân.',
+      detail:
+        'Thiết kế uốn lượn theo vòm bàn chân kết hợp đệm giảm chấn gót và rãnh gập xương bàn chân.',
     },
     {
       id: 'boot-carbon',
@@ -145,7 +156,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: '11-Ply Biaxial Carbon Chassis',
       material: 'Aerospace Pre-Preg Carbon Fiber',
       metric: '91.4% Energy Return',
-      detail: 'Độ cứng phân bổ theo vùng: mũi giày đàn hồi cực nhanh trong 0.04s, giữa bàn chân chống xoắn trục.',
+      detail:
+        'Độ cứng phân bổ theo vùng: mũi giày đàn hồi cực nhanh trong 0.04s, giữa bàn chân chống xoắn trục.',
     },
     {
       id: 'boot-studs',
@@ -154,7 +166,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'Titanium-Base Chevron & Conical Studs',
       material: 'CNC Brushed Titanium + TPU Tips',
       metric: '11-Stud Tri-Zone Traction',
-      detail: 'Đinh mũi hình mũi tên tạo lực đạp bứt tốc bước đầu; đinh gót ổn định lực phanh trụ.',
+      detail:
+        'Đinh mũi hình mũi tên tạo lực đạp bứt tốc bước đầu; đinh gót ổn định lực phanh trụ.',
     },
   ],
   gloves: [
@@ -165,7 +178,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: '4.0mm German Contact Latex Palm',
       material: '4mm Natural Contact Latex + 3mm Damping Foam',
       metric: '1.42 μ Wet Grip Coefficient',
-      detail: 'Cấu trúc vi bọt hút nước kích hoạt độ dính tối đa ngay cả dưới trời mưa lớn.',
+      detail:
+        'Cấu trúc vi bọt hút nước kích hoạt độ dính tối đa ngay cả dưới trời mưa lớn.',
     },
     {
       id: 'glove-spines',
@@ -174,7 +188,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: '5-Finger Carbon Ortho-Spines',
       material: 'Articulated Bi-Directional Carbon Rods',
       metric: '180° Hyperextension Lock',
-      detail: 'Cho phép nắm tay linh hoạt nhưng khóa cứng ngay lập tức khi chịu lực sút căng cận thành.',
+      detail:
+        'Cho phép nắm tay linh hoạt nhưng khóa cứng ngay lập tức khi chịu lực sút căng cận thành.',
     },
     {
       id: 'glove-backhand',
@@ -183,7 +198,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: 'Neoprene Backhand & 3D Silicone Punch Zone',
       material: 'Perforated Compression Neoprene + Silicone Fins',
       metric: 'Directional Clearance Control',
-      detail: 'Các gờ silicone đúc nổi 3D trên khớp ngón tay truyền lực chính xác khi đấm bóng giải nguy.',
+      detail:
+        'Các gờ silicone đúc nổi 3D trên khớp ngón tay truyền lực chính xác khi đấm bóng giải nguy.',
     },
     {
       id: 'glove-wrist',
@@ -192,7 +208,8 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
       nameEn: '360° Elastic Neoprene Wrist Tunnel',
       material: 'Elastic Latex Wrap + Keeper ID Window',
       metric: '245 g Total Pair Mass',
-      detail: 'Cổ tay liền mạch ôm khít khớp cổ tay kèm đai quấn 2 vòng cố định chắc chắn.',
+      detail:
+        'Cổ tay liền mạch ôm khít khớp cổ tay kèm đai quấn 2 vòng cố định chắc chắn.',
     },
   ],
 };
@@ -200,34 +217,34 @@ export const CATEGORY_LAYERS: Record<ProductCategory, LayerTelemetry[]> = {
 export const CATEGORY_COLORWAYS: Record<ProductCategory, ColorwayPreset[]> = {
   kits: [
     {
+      id: 'fcb-crimson-gold',
+      name: 'FC Bayern Heimtrikot (Crimson / White / Gold)',
+      swatchHex: '#c8102e',
+      secondaryHex: '#d4af37',
+      primaryColor: 0xffffff, // Uses rich red/ruby striped texture map directly
+      secondaryColor: 0xfafaf9,
+      accentColor: 0xd4af37,
+      trimColor: 0xffffff,
+    },
+    {
       id: 'dfb-heimtrikot-white',
-      name: 'Heimtrikot 2024 (Pure White / Obsidian)',
+      name: 'DFB Heimtrikot 2024 (Pure White / Obsidian)',
       swatchHex: '#f8fafc',
       secondaryHex: '#09090b',
       primaryColor: 0xf4f4f2,
       secondaryColor: 0xfafaf9,
       accentColor: 0x141413,
-      trimColor: 0xd6d3d1,
+      trimColor: 0x141413,
     },
     {
       id: 'maestro-navy',
-      name: 'Maestro Home (Midnight Navy / Chalk)',
+      name: 'Maestro Royale (Midnight Navy / Gold)',
       swatchHex: '#172554',
-      secondaryHex: '#e11d48',
-      primaryColor: 0x172554,
-      secondaryColor: 0xf5f5f4,
-      accentColor: 0xe11d48,
-      trimColor: 0x38bdf8,
-    },
-    {
-      id: 'notturno-obsidian',
-      name: 'Terza Kit (Obsidian / Gold)',
-      swatchHex: '#18181b',
       secondaryHex: '#eab308',
-      primaryColor: 0x18181b,
-      secondaryColor: 0xd4af37,
+      primaryColor: 0x1e3a8a,
+      secondaryColor: 0xf8fafc,
       accentColor: 0xeab308,
-      trimColor: 0xfef08a,
+      trimColor: 0xf8fafc,
     },
   ],
   balls: [
@@ -339,7 +356,6 @@ export function createStudioEnvironment(renderer: THREE.WebGLRenderer): THREE.Te
   const envScene = new THREE.Scene();
   envScene.background = new THREE.Color(0xdfddd8);
 
-  // Overhead daylight softbox
   const topBox = new THREE.Mesh(
     new THREE.PlaneGeometry(16, 16),
     new THREE.MeshBasicMaterial({ color: 0xffffff })
@@ -348,7 +364,6 @@ export function createStudioEnvironment(renderer: THREE.WebGLRenderer): THREE.Te
   topBox.rotation.x = Math.PI / 2;
   envScene.add(topBox);
 
-  // Left soft key light
   const leftStrip = new THREE.Mesh(
     new THREE.PlaneGeometry(12, 8),
     new THREE.MeshBasicMaterial({ color: 0xf8fafc })
@@ -357,16 +372,14 @@ export function createStudioEnvironment(renderer: THREE.WebGLRenderer): THREE.Te
   leftStrip.lookAt(0, 0, 0);
   envScene.add(leftStrip);
 
-  // Right grazing fill strip for embossed fabric relief
   const rightStrip = new THREE.Mesh(
     new THREE.PlaneGeometry(10, 6),
-    new THREE.MeshBasicMaterial({ color: 0xe7e5e4 })
+    new THREE.MeshBasicMaterial({ color: 0xfff1f2 })
   );
   rightStrip.position.set(8, 2, 4);
   rightStrip.lookAt(0, 0, 0);
   envScene.add(rightStrip);
 
-  // Warm studio floor bounce
   const floorBox = new THREE.Mesh(
     new THREE.PlaneGeometry(18, 18),
     new THREE.MeshBasicMaterial({ color: 0xd6d3d1 })
@@ -425,8 +438,103 @@ export function createCarbonWeaveTexture(): {
 }
 
 /**
- * Generates the iconic DFB Heimtrikot 2024 geometric triangle/diamond embossed
- * jacquard knit relief texture + fine micro-knit ribbing.
+ * Generates the FC Bayern München Crimson & Ruby Vertical Striped + Micro-Checkered
+ * Jacquard Color Map & Relief Bump Map (matching the user's reference photo!).
+ */
+export function createBayernStripeJacquardTexture(): {
+  colorMap: THREE.CanvasTexture;
+  bumpMap: THREE.CanvasTexture;
+} {
+  const colorCanvas = document.createElement('canvas');
+  colorCanvas.width = 1024;
+  colorCanvas.height = 1024;
+  const cCtx = colorCanvas.getContext('2d')!;
+
+  const bumpCanvas = document.createElement('canvas');
+  bumpCanvas.width = 1024;
+  bumpCanvas.height = 1024;
+  const bCtx = bumpCanvas.getContext('2d')!;
+
+  // Base bright crimson red
+  cCtx.fillStyle = '#c8102e';
+  cCtx.fillRect(0, 0, 1024, 1024);
+
+  bCtx.fillStyle = '#909090';
+  bCtx.fillRect(0, 0, 1024, 1024);
+
+  // Vertical alternating tonal stripes (16 stripes across 1024px)
+  const stripeW = 64;
+  for (let x = 0; x < 1024; x += stripeW) {
+    const isDarkStripe = (x / stripeW) % 2 === 1;
+
+    if (isDarkStripe) {
+      // Deep ruby vertical stripe with thin pinstripe borders
+      cCtx.fillStyle = '#8b0d21';
+      cCtx.fillRect(x, 0, stripeW, 1024);
+
+      // Subtle lighter red inner pinstripe lines
+      cCtx.fillStyle = '#a61229';
+      cCtx.fillRect(x + 6, 0, 3, 1024);
+      cCtx.fillRect(x + stripeW - 9, 0, 3, 1024);
+
+      bCtx.fillStyle = '#707070';
+      bCtx.fillRect(x, 0, stripeW, 1024);
+    } else {
+      cCtx.fillStyle = '#d0142c';
+      cCtx.fillRect(x, 0, stripeW, 1024);
+
+      bCtx.fillStyle = '#a8a8a8';
+      bCtx.fillRect(x, 0, stripeW, 1024);
+    }
+
+    // Micro-checkered jacquard square pattern inside every stripe (visible in close-up photo!)
+    const cell = 8;
+    for (let y = 0; y < 1024; y += cell) {
+      for (let sx = x; sx < x + stripeW; sx += cell) {
+        const isCheck = ((sx / cell) + (y / cell)) % 2 === 0;
+        if (isCheck) {
+          cCtx.fillStyle = isDarkStripe
+            ? 'rgba(0, 0, 0, 0.14)'
+            : 'rgba(255, 255, 255, 0.07)';
+          cCtx.fillRect(sx, y, cell - 1, cell - 1);
+
+          bCtx.fillStyle = isDarkStripe ? '#585858' : '#c8c8c8';
+          bCtx.fillRect(sx + 1, y + 1, cell - 2, cell - 2);
+        } else {
+          // Fine knit stitch pore
+          bCtx.fillStyle = '#383838';
+          bCtx.fillRect(sx + 3, y + 3, 2, 2);
+        }
+      }
+    }
+  }
+
+  // Fine diagonal knit thread sheen lines
+  bCtx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+  bCtx.lineWidth = 1;
+  for (let i = -1024; i < 2048; i += 4) {
+    bCtx.beginPath();
+    bCtx.moveTo(i, 0);
+    bCtx.lineTo(i + 1024, 1024);
+    bCtx.stroke();
+  }
+
+  const colorMap = new THREE.CanvasTexture(colorCanvas);
+  colorMap.wrapS = THREE.RepeatWrapping;
+  colorMap.wrapT = THREE.RepeatWrapping;
+  colorMap.repeat.set(2.4, 2.0);
+
+  const bumpMap = new THREE.CanvasTexture(bumpCanvas);
+  bumpMap.wrapS = THREE.RepeatWrapping;
+  bumpMap.wrapT = THREE.RepeatWrapping;
+  bumpMap.repeat.set(2.4, 2.0);
+
+  return { colorMap, bumpMap };
+}
+
+/**
+ * Generates the DFB Heimtrikot 2024 geometric triangle/diamond embossed
+ * jacquard knit relief texture.
  */
 export function createJacquardKnitTexture(): THREE.CanvasTexture {
   const canvas = document.createElement('canvas');
@@ -434,11 +542,9 @@ export function createJacquardKnitTexture(): THREE.CanvasTexture {
   canvas.height = 1024;
   const ctx = canvas.getContext('2d')!;
 
-  // Base raised jacquard ridge height
   ctx.fillStyle = '#b8b8b8';
   ctx.fillRect(0, 0, 1024, 1024);
 
-  // Fine diagonal micro-knit thread texture across entire fabric
   ctx.strokeStyle = '#a4a4a4';
   ctx.lineWidth = 1.2;
   for (let i = -1024; i < 2048; i += 5) {
@@ -448,7 +554,6 @@ export function createJacquardKnitTexture(): THREE.CanvasTexture {
     ctx.stroke();
   }
 
-  // Draw recessed geometric triangles & chevrons (DFB Heimtrikot 2024 pattern)
   const tile = 256;
   for (let ty = 0; ty < 1024; ty += tile) {
     for (let tx = 0; tx < 1024; tx += tile) {
@@ -465,26 +570,11 @@ export function createJacquardKnitTexture(): THREE.CanvasTexture {
         ctx.fillStyle = depthGray;
         ctx.fill();
 
-        // Crisp embossed seam bevel around each triangle
         ctx.lineWidth = 10;
         ctx.strokeStyle = '#dcdcdc';
         ctx.stroke();
-
-        // Inner fine knit lines inside the recessed triangle
-        ctx.save();
-        ctx.clip();
-        ctx.strokeStyle = '#686868';
-        ctx.lineWidth = 1.5;
-        for (let k = -tile; k < tile * 2; k += 6) {
-          ctx.beginPath();
-          ctx.moveTo(k, 0);
-          ctx.lineTo(k - tile, tile);
-          ctx.stroke();
-        }
-        ctx.restore();
       };
 
-      // Upper-left triangle
       drawRecessedPolygon(
         [
           [18, 14],
@@ -493,8 +583,6 @@ export function createJacquardKnitTexture(): THREE.CanvasTexture {
         ],
         '#7c7c7c'
       );
-
-      // Center-right large geometric wedge
       drawRecessedPolygon(
         [
           [176, 18],
@@ -503,8 +591,6 @@ export function createJacquardKnitTexture(): THREE.CanvasTexture {
         ],
         '#727272'
       );
-
-      // Lower-left chevron facet
       drawRecessedPolygon(
         [
           [16, 162],
@@ -513,8 +599,6 @@ export function createJacquardKnitTexture(): THREE.CanvasTexture {
         ],
         '#767676'
       );
-
-      // Lower-right diamond facet
       drawRecessedPolygon(
         [
           [142, 184],
@@ -537,7 +621,7 @@ export function createJacquardKnitTexture(): THREE.CanvasTexture {
 }
 
 /**
- * Generates fine 2x2 ribbed knit collar bump map (visible in top-right macro view).
+ * Generates fine 2x2 ribbed knit collar bump map.
  */
 export function createCollarRibTexture(): THREE.CanvasTexture {
   const canvas = document.createElement('canvas');
@@ -560,9 +644,11 @@ export function createCollarRibTexture(): THREE.CanvasTexture {
 }
 
 /**
- * Generates the circular woven crest badge texture (inspired by DFB Heimtrikot 2024).
+ * Generates the FC Bayern München Circular Woven Crest Texture
+ * (Royal Blue outer border, Crimson ring with 'FC BAYERN · MÜNCHEN',
+ * and Bavarian Blue & White diamond lozenge pattern at the center!).
  */
-export function createCircularCrestTexture(): {
+export function createBayernCrestTexture(): {
   map: THREE.CanvasTexture;
   bumpMap: THREE.CanvasTexture;
 } {
@@ -573,56 +659,61 @@ export function createCircularCrestTexture(): {
   const cx = 512;
   const cy = 512;
 
-  // Satin white woven badge background with subtle diagonal twill weave
-  ctx.fillStyle = '#f5f5f4';
-  ctx.fillRect(0, 0, 1024, 1024);
+  // 1. Outer Royal Blue Satin Stitched Border
+  ctx.fillStyle = '#00529f';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 496, 0, Math.PI * 2);
+  ctx.fill();
 
-  ctx.strokeStyle = '#e7e5e4';
-  ctx.lineWidth = 2;
-  for (let i = -1024; i < 2048; i += 8) {
-    ctx.beginPath();
-    ctx.moveTo(i, 0);
-    ctx.lineTo(i + 1024, 1024);
-    ctx.stroke();
+  // 2. Thin White Outer Separator Ring
+  ctx.fillStyle = '#ffffff';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 464, 0, Math.PI * 2);
+  ctx.fill();
+
+  // 3. Broad Crimson Red Typography Ring
+  ctx.fillStyle = '#dc052d';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 448, 0, Math.PI * 2);
+  ctx.fill();
+
+  // 4. Inner White Ring around the Bavarian Diamonds
+  ctx.fillStyle = '#ffffff';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 282, 0, Math.PI * 2);
+  ctx.fill();
+
+  // 5. Center Bavarian Blue & White Diamond Lozenge Grid (Rauten) clipped to r=266
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx, cy, 266, 0, Math.PI * 2);
+  ctx.clip();
+
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(cx - 280, cy - 280, 560, 560);
+
+  // Rotate grid and shear into authentic Bavarian diamonds
+  ctx.translate(cx, cy);
+  ctx.rotate(0.58); // ~33 deg diagonal orientation
+  const dW = 74;
+  const dH = 118;
+  ctx.fillStyle = '#0066b2';
+  for (let row = -5; row <= 5; row++) {
+    for (let col = -5; col <= 5; col++) {
+      const ox = col * dW + (Math.abs(row) % 2 === 1 ? dW * 0.5 : 0);
+      const oy = row * (dH * 0.5);
+      ctx.beginPath();
+      ctx.moveTo(ox, oy - dH * 0.5);
+      ctx.lineTo(ox + dW * 0.5, oy);
+      ctx.lineTo(ox, oy + dH * 0.5);
+      ctx.lineTo(ox - dW * 0.5, oy);
+      ctx.closePath();
+      ctx.fill();
+    }
   }
+  ctx.restore();
 
-  // Outer satin embroidered border ring
-  ctx.beginPath();
-  ctx.arc(cx, cy, 480, 0, Math.PI * 2);
-  ctx.strokeStyle = '#d6d3d1';
-  ctx.lineWidth = 34;
-  ctx.stroke();
-
-  // Segmented outer black ring (3 curved bars like DFB crest)
-  const segments = [
-    [-Math.PI * 0.78, -Math.PI * 0.22],
-    [-Math.PI * 0.14, Math.PI * 0.44],
-    [Math.PI * 0.56, Math.PI * 1.14],
-  ];
-  ctx.strokeStyle = '#141413';
-  ctx.lineWidth = 42;
-  ctx.lineCap = 'butt';
-  segments.forEach(([startAngle, endAngle]) => {
-    ctx.beginPath();
-    ctx.arc(cx, cy, 422, startAngle, endAngle);
-    ctx.stroke();
-  });
-
-  // Middle continuous black ring
-  ctx.beginPath();
-  ctx.arc(cx, cy, 366, 0, Math.PI * 2);
-  ctx.strokeStyle = '#141413';
-  ctx.lineWidth = 18;
-  ctx.stroke();
-
-  // Inner black ring enclosing the eagle emblem
-  ctx.beginPath();
-  ctx.arc(cx, cy, 246, 0, Math.PI * 2);
-  ctx.strokeStyle = '#141413';
-  ctx.lineWidth = 14;
-  ctx.stroke();
-
-  // Circular Typography ("DEUTSCHER · FUSSBALL-BUND")
+  // 6. Circular White Embroidery Text: 'FC BAYERN' (top) & 'MÜNCHEN' (bottom)
   const drawCircularText = (
     text: string,
     radius: number,
@@ -631,8 +722,8 @@ export function createCircularCrestTexture(): {
     flipBottom: boolean = false
   ) => {
     ctx.save();
-    ctx.font = '800 54px "Plus Jakarta Sans", "Outfit", sans-serif';
-    ctx.fillStyle = '#141413';
+    ctx.font = '800 82px "Plus Jakarta Sans", "Outfit", sans-serif';
+    ctx.fillStyle = '#ffffff';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
@@ -654,79 +745,18 @@ export function createCircularCrestTexture(): {
     ctx.restore();
   };
 
-  drawCircularText('DEUTSCHER', 306, -Math.PI * 0.62, Math.PI * 0.06, false);
-  drawCircularText('FUSSBALL-BUND', 306, Math.PI * 0.96, Math.PI * 0.22, true);
+  drawCircularText('FC BAYERN', 364, -Math.PI * 0.84, -Math.PI * 0.16, false);
+  drawCircularText('MÜNCHEN', 364, Math.PI * 0.82, Math.PI * 0.18, true);
 
-  // Heraldic Eagle Emblem in the Center
-  ctx.save();
-  ctx.translate(cx, cy);
-  ctx.fillStyle = '#141413';
-
-  // Eagle central torso & shield
-  ctx.beginPath();
-  ctx.moveTo(0, -135);
-  ctx.bezierCurveTo(48, -110, 56, -20, 32, 65);
-  ctx.lineTo(0, 118);
-  ctx.lineTo(-32, 65);
-  ctx.bezierCurveTo(-56, -20, -48, -110, 0, -135);
-  ctx.fill();
-
-  // Eagle head & beak (facing right/left heraldic)
-  ctx.beginPath();
-  ctx.arc(6, -136, 34, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.moveTo(28, -148);
-  ctx.lineTo(68, -134);
-  ctx.lineTo(32, -120);
-  ctx.closePath();
-  ctx.fill();
-
-  // Spread heraldic wings with distinct feather slots (left & right)
-  for (const side of [-1, 1]) {
-    ctx.save();
-    ctx.scale(side, 1);
-
-    // Upper wing shoulder arch
+  // Subtle diagonal embroidery thread lines across the badge
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+  ctx.lineWidth = 2;
+  for (let i = -1024; i < 2048; i += 6) {
     ctx.beginPath();
-    ctx.moveTo(24, -82);
-    ctx.bezierCurveTo(95, -138, 178, -112, 196, -54);
-    ctx.lineTo(175, -38);
-    ctx.bezierCurveTo(132, -72, 78, -74, 28, -42);
-    ctx.closePath();
-    ctx.fill();
-
-    // 6 distinct vertical/fanned flight feathers
-    for (let f = 0; f < 6; f++) {
-      const fx = 52 + f * 24;
-      const fyTop = -58 + f * 6;
-      const fyBot = 58 - f * 8;
-      ctx.beginPath();
-      ctx.roundRect(fx, fyTop, 16, fyBot - fyTop, 8);
-      ctx.fill();
-    }
-
-    // Talons & tail feathers at bottom
-    ctx.beginPath();
-    ctx.moveTo(22, 62);
-    ctx.lineTo(78, 112);
-    ctx.lineTo(54, 128);
-    ctx.lineTo(14, 82);
-    ctx.closePath();
-    ctx.fill();
-
-    ctx.restore();
+    ctx.moveTo(i, 0);
+    ctx.lineTo(i + 1024, 1024);
+    ctx.stroke();
   }
-
-  // Center tail plume
-  ctx.beginPath();
-  ctx.moveTo(-26, 85);
-  ctx.lineTo(0, 162);
-  ctx.lineTo(26, 85);
-  ctx.closePath();
-  ctx.fill();
-
-  ctx.restore();
 
   const map = new THREE.CanvasTexture(canvas);
   map.needsUpdate = true;
@@ -738,12 +768,128 @@ export function createCircularCrestTexture(): {
 }
 
 /**
+ * Generates the DFB Circular Eagle Crest Texture (for Preset 1: DFB White Kit).
+ */
+export function createDfbCrestTexture(): THREE.CanvasTexture {
+  const canvas = document.createElement('canvas');
+  canvas.width = 1024;
+  canvas.height = 1024;
+  const ctx = canvas.getContext('2d')!;
+  const cx = 512;
+  const cy = 512;
+
+  ctx.fillStyle = '#f5f5f4';
+  ctx.fillRect(0, 0, 1024, 1024);
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, 480, 0, Math.PI * 2);
+  ctx.strokeStyle = '#d6d3d1';
+  ctx.lineWidth = 34;
+  ctx.stroke();
+
+  const segments = [
+    [-Math.PI * 0.78, -Math.PI * 0.22],
+    [-Math.PI * 0.14, Math.PI * 0.44],
+    [Math.PI * 0.56, Math.PI * 1.14],
+  ];
+  ctx.strokeStyle = '#141413';
+  ctx.lineWidth = 42;
+  segments.forEach(([s, e]) => {
+    ctx.beginPath();
+    ctx.arc(cx, cy, 422, s, e);
+    ctx.stroke();
+  });
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, 366, 0, Math.PI * 2);
+  ctx.lineWidth = 18;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, 246, 0, Math.PI * 2);
+  ctx.lineWidth = 14;
+  ctx.stroke();
+
+  // Center Eagle Silhouette
+  ctx.fillStyle = '#141413';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 125, 0, Math.PI * 2);
+  ctx.fill();
+
+  const map = new THREE.CanvasTexture(canvas);
+  map.needsUpdate = true;
+  return map;
+}
+
+/**
+ * Generates the Inner Neck Size Stamp Texture (visible inside the back collar in the photo!).
+ */
+export function createInnerNeckLabelTexture(): THREE.CanvasTexture {
+  const canvas = document.createElement('canvas');
+  canvas.width = 512;
+  canvas.height = 256;
+  const ctx = canvas.getContext('2d')!;
+
+  // Rich crimson inner neck lining fabric
+  ctx.fillStyle = '#b11226';
+  ctx.fillRect(0, 0, 512, 256);
+
+  // Subtle horizontal knit lines
+  ctx.strokeStyle = 'rgba(0,0,0,0.12)';
+  ctx.lineWidth = 2;
+  for (let y = 0; y < 256; y += 6) {
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(512, y);
+    ctx.stroke();
+  }
+
+  // White 3-Bar Performance Pyramid Icon at top center
+  ctx.fillStyle = '#f5f5f4';
+  ctx.save();
+  ctx.translate(256, 52);
+  ctx.fillRect(-26, 6, 12, 18);
+  ctx.fillRect(-6, -6, 12, 30);
+  ctx.fillRect(14, -18, 12, 42);
+  ctx.restore();
+
+  ctx.font = '700 18px "Plus Jakarta Sans", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('STADIO', 256, 94);
+
+  // Size Grid Table (L | L | L | L / UK | US | EU | D)
+  ctx.strokeStyle = 'rgba(255,255,255,0.75)';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(136, 112);
+  ctx.lineTo(376, 112);
+  ctx.moveTo(136, 156);
+  ctx.lineTo(376, 156);
+  ctx.moveTo(136, 192);
+  ctx.lineTo(376, 192);
+  ctx.stroke();
+
+  ctx.font = '700 24px "JetBrains Mono", monospace';
+  ctx.fillText('L    L    L    L', 256, 143);
+
+  ctx.font = '600 15px "JetBrains Mono", monospace';
+  ctx.fillText('UK   US   EU   D', 256, 180);
+
+  ctx.font = '600 14px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('MADE IN MONTEBELLUNA', 256, 218);
+
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.needsUpdate = true;
+  return tex;
+}
+
+/**
  * Builds a true 3D faceted 5-pointed embroidered star geometry.
  */
 function createFivePointStarGeometry(
-  outerR: number = 0.055,
-  innerR: number = 0.023,
-  height: number = 0.024
+  outerR: number = 0.048,
+  innerR: number = 0.02,
+  height: number = 0.022
 ): THREE.BufferGeometry {
   const vertices: number[] = [];
   const pts: [number, number][] = [];
@@ -754,7 +900,6 @@ function createFivePointStarGeometry(
     pts.push([Math.cos(angle) * r, -Math.sin(angle) * r]);
   }
 
-  // 10 triangular facets rising to the 3D star apex (0, 0, height)
   for (let i = 0; i < 10; i++) {
     const p1 = pts[i];
     const p2 = pts[(i + 1) % 10];
@@ -775,27 +920,24 @@ export function drawNumberPlateCanvas(
   const ctx = canvas.getContext('2d')!;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  const cleanName = (nameStr || 'ROSSI').trim().toUpperCase();
-  const cleanNum = (numStr || '10').trim();
+  const cleanName = (nameStr || 'MÜLLER').trim().toUpperCase();
+  const cleanNum = (numStr || '25').trim();
 
-  // Top player name arch
-  ctx.fillStyle = '#141413';
-  ctx.font = '700 28px "Outfit", sans-serif';
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '800 28px "Outfit", sans-serif';
   ctx.textAlign = 'center';
   ctx.fillText(cleanName, 128, 48);
 
-  // Squad number
   ctx.font = '800 150px "Outfit", sans-serif';
-  ctx.strokeStyle = 'rgba(225, 29, 72, 0.9)';
+  ctx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.lineWidth = 5;
   ctx.strokeText(cleanNum, 128, 196);
-  ctx.fillStyle = '#141413';
+  ctx.fillStyle = '#ffffff';
   ctx.fillText(cleanNum, 128, 196);
 
-  // Bottom atelier crest mark
-  ctx.font = '600 13px "JetBrains Mono", monospace';
-  ctx.fillStyle = '#78716c';
-  ctx.fillText('DFB · STADIO ATELIER 2024', 128, 232);
+  ctx.font = '700 14px "Plus Jakarta Sans", sans-serif';
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText('FC BAYERN MÜNCHEN', 128, 234);
 }
 
 export function createNumberPlateTexture(
@@ -845,12 +987,12 @@ export function createBallDimpleTexture(): THREE.CanvasTexture {
 }
 
 // ============================================================================
-// 1. BUILD KITS (ÁO ĐẤU) — DFB HEIMTRIKOT 2024 & JACQUARD MACRO ASSEMBLY
+// 1. BUILD KITS (ÁO ĐẤU) — FC BAYERN MÜNCHEN & DFB MACRO JERSEY ASSEMBLY
 // ============================================================================
 
 export function buildKitAssembly(
   registerMat: (mat: THREE.MeshStandardMaterial) => THREE.MeshStandardMaterial,
-  knitBump: THREE.CanvasTexture,
+  dfbKnitBump: THREE.CanvasTexture,
   numberTex: THREE.CanvasTexture
 ): {
   group: THREE.Group;
@@ -860,69 +1002,97 @@ export function buildKitAssembly(
   const group = new THREE.Group();
   const parts: ExplodablePart[] = [];
 
+  const bayernJacquard = createBayernStripeJacquardTexture();
   const collarRibBump = createCollarRibTexture();
-  const crestTextures = createCircularCrestTexture();
+  const bayernCrest = createBayernCrestTexture();
+  const dfbCrestMap = createDfbCrestTexture();
+  const innerNeckTex = createInnerNeckLabelTexture();
 
-  // Default to crisp DFB Heimtrikot 2024 White Embossed Jacquard
+  // Default to FC Bayern Crimson & Ruby Vertical Checkered Jacquard
   const primaryMat = registerMat(
     new THREE.MeshPhysicalMaterial({
-      color: 0xf4f4f2,
-      roughness: 0.62,
-      metalness: 0.04,
-      bumpMap: knitBump,
-      bumpScale: 0.036,
-      clearcoat: 0.08,
-      clearcoatRoughness: 0.6,
+      color: 0xffffff,
+      map: bayernJacquard.colorMap,
+      bumpMap: bayernJacquard.bumpMap,
+      bumpScale: 0.028,
+      roughness: 0.54,
+      metalness: 0.06,
+      clearcoat: 0.1,
+      clearcoatRoughness: 0.55,
       side: THREE.DoubleSide,
     })
   );
 
-  const secondaryMat = registerMat(
+  // Crisp White Ribbed Collar & Shoulder Stripes Material
+  const whiteTrimMat = registerMat(
     new THREE.MeshPhysicalMaterial({
       color: 0xfafaf9,
-      roughness: 0.55,
-      metalness: 0.04,
+      roughness: 0.48,
+      metalness: 0.05,
       bumpMap: collarRibBump,
-      bumpScale: 0.032,
+      bumpScale: 0.026,
     })
   );
 
-  const accentMat = registerMat(
+  // Metallic Gold Piping & 5 Embroidered 3D Stars Material
+  const goldAccentMat = registerMat(
     new THREE.MeshPhysicalMaterial({
-      color: 0x141413,
-      roughness: 0.34,
-      metalness: 0.25,
-      clearcoat: 0.35,
+      color: 0xd4af37,
+      roughness: 0.26,
+      metalness: 0.68,
+      clearcoat: 0.45,
     })
   );
 
+  // Royal Blue Satin Crest Rim Material
+  const crestRimMat = registerMat(
+    new THREE.MeshPhysicalMaterial({
+      color: 0x00529f,
+      roughness: 0.38,
+      metalness: 0.15,
+      bumpMap: collarRibBump,
+      bumpScale: 0.02,
+    })
+  );
+
+  // Circular Woven Crest Face Material
   const crestFaceMat = registerMat(
     new THREE.MeshPhysicalMaterial({
       color: 0xffffff,
-      map: crestTextures.map,
-      bumpMap: crestTextures.bumpMap,
-      bumpScale: 0.018,
-      roughness: 0.42,
+      map: bayernCrest.map,
+      bumpMap: bayernCrest.bumpMap,
+      bumpScale: 0.02,
+      roughness: 0.38,
       metalness: 0.08,
-      clearcoat: 0.2,
+      clearcoat: 0.25,
+    })
+  );
+
+  // Heat-Applied White TPU Material (for Right-Chest 3-Bar Logo & Center-Chest "T" Sponsor)
+  const whiteTpuMat = registerMat(
+    new THREE.MeshPhysicalMaterial({
+      color: 0xf8fafc,
+      roughness: 0.32,
+      metalness: 0.08,
+      clearcoat: 0.3,
     })
   );
 
   const ventCoreMat = registerMat(
     new THREE.MeshStandardMaterial({
-      color: 0xd6d3d1,
+      color: 0xf43f5e,
       roughness: 0.4,
       metalness: 0.2,
       wireframe: true,
       transparent: true,
-      opacity: 0.52,
+      opacity: 0.45,
     })
   );
 
-  // --- LAYER 1: Sculpted Anatomical Torso Shell with Embossed Geometric Jacquard ---
+  // --- LAYER 1: Sculpted Anatomical Torso Shell with Natural Fabric Drape Folds ---
   const torsoShellGroup = new THREE.Group();
 
-  const torsoGeo = new THREE.CylinderGeometry(0.94, 0.85, 2.18, 64, 36, true);
+  const torsoGeo = new THREE.CylinderGeometry(0.95, 0.85, 2.18, 72, 42, true);
   const posAttr = torsoGeo.attributes.position;
   const v = new THREE.Vector3();
   for (let i = 0; i < posAttr.count; i++) {
@@ -932,31 +1102,42 @@ export function buildKitAssembly(
 
     let widthFactor = 1.0;
     if (normY > 0.65) {
-      widthFactor = 1.18 - (normY - 0.65) * 1.42;
+      widthFactor = 1.18 - (normY - 0.65) * 1.4;
     } else if (normY > 0) {
       widthFactor = 1.02 + normY * 0.24;
     } else {
       widthFactor = 0.92 + Math.pow(Math.abs(normY), 1.6) * 0.12;
     }
 
-    // Smooth athletic chest plane in front (z > 0) so the circular crest & 4 stars sit naturally
+    // Smooth athletic chest plane in front (z > 0)
     const frontBump =
-      v.z > 0 && normY > -0.1 && normY < 0.75
-        ? Math.sin(((normY + 0.1) / 0.85) * Math.PI) *
+      v.z > 0 && normY > -0.15 && normY < 0.78
+        ? Math.sin(((normY + 0.15) / 0.93) * Math.PI) *
           Math.pow(Math.sin(angle), 2) *
           0.12
         : 0;
 
-    // Subtle fabric drape folds
+    // Realistic diagonal fabric drape folds across the chest (matching the reference photo!)
     const drapeWave =
-      v.z > 0 ? Math.sin(v.x * 5.2 + v.y * 3.8) * 0.008 : 0;
+      v.z > 0
+        ? Math.sin(v.x * 6.5 - v.y * 5.2) * 0.014 +
+          Math.cos(v.x * 3.2 + v.y * 7.0) * 0.009
+        : 0;
+
+    // Front V-neck dip at top-center (x near 0, normY > 0.8, z > 0)
+    const neckFrontDip =
+      v.z > 0 && normY > 0.75 && Math.abs(v.x) < 0.42
+        ? -Math.pow(1 - Math.abs(v.x) / 0.42, 1.5) *
+          ((normY - 0.75) / 0.25) *
+          0.18
+        : 0;
 
     const hemDrop =
       normY < -0.85 && v.z < 0 ? -0.08 * Math.abs(Math.sin(angle)) : 0;
 
     v.x *= widthFactor * 1.12;
     v.z = v.z * 0.54 + frontBump + drapeWave;
-    v.y += hemDrop;
+    v.y += hemDrop + neckFrontDip;
     posAttr.setXYZ(i, v.x, v.y, v.z);
   }
   torsoGeo.computeVertexNormals();
@@ -964,18 +1145,10 @@ export function buildKitAssembly(
   const torsoMesh = new THREE.Mesh(torsoGeo, primaryMat);
   torsoShellGroup.add(torsoMesh);
 
-  // Diagonal Heat-Bonded Seam Strip & Breathable Side Waffle Gusset (matching bottom-right of DFB photo)
-  const seamTapeGeo = new THREE.BoxGeometry(0.032, 0.72, 0.015);
-  const seamTape = new THREE.Mesh(seamTapeGeo, secondaryMat);
-  seamTape.position.set(0.58, 0.14, 0.49);
-  seamTape.rotation.z = -0.72;
-  seamTape.rotation.y = 0.36;
-  torsoShellGroup.add(seamTape);
-
-  // Bottom ultrasonic bonded hem trim
-  const hemGeo = new THREE.TorusGeometry(0.85, 0.03, 12, 48);
+  // Bottom hem trim
+  const hemGeo = new THREE.TorusGeometry(0.85, 0.028, 12, 48);
   hemGeo.scale(1.12, 0.55, 1);
-  const hemMesh = new THREE.Mesh(hemGeo, secondaryMat);
+  const hemMesh = new THREE.Mesh(hemGeo, whiteTrimMat);
   hemMesh.rotation.x = Math.PI / 2;
   hemMesh.position.set(0, -1.07, 0);
   torsoShellGroup.add(hemMesh);
@@ -986,7 +1159,7 @@ export function buildKitAssembly(
     layerId: 'kit-shell',
     mesh: torsoShellGroup,
     basePos: new THREE.Vector3(0, 0, 0),
-    explodedPos: new THREE.Vector3(0, 0, -0.28),
+    explodedPos: new THREE.Vector3(0, 0, -0.26),
     baseRot: new THREE.Euler(0, 0, 0),
     explodedRot: new THREE.Euler(0, 0, 0),
     highlightMaterials: [primaryMat],
@@ -1002,16 +1175,68 @@ export function buildKitAssembly(
   group.add(coreGroup);
   parts.push({
     id: 'kit-core-part',
-    layerId: 'kit-core',
+    layerId: 'kit-shell',
     mesh: coreGroup,
     basePos: new THREE.Vector3(0, 0, 0),
-    explodedPos: new THREE.Vector3(0, -0.15, -0.92),
+    explodedPos: new THREE.Vector3(0, -0.15, -0.88),
     baseRot: new THREE.Euler(0, 0, 0),
     explodedRot: new THREE.Euler(0.08, 0, 0),
     highlightMaterials: [ventCoreMat],
   });
 
-  // --- LAYER 3: Left & Right Articulated Raglan Sleeves ---
+  // --- LAYER 3: White & Gold-Piped V-Crew Collar + Inner Neck Size Label Panel ---
+  const collarGroup = new THREE.Group();
+
+  // Main White Ribbed Collar Band
+  const collarGeo = new THREE.TorusGeometry(0.45, 0.076, 24, 64);
+  collarGeo.scale(1.14, 0.72, 1.05);
+  const collarMesh = new THREE.Mesh(collarGeo, whiteTrimMat);
+  collarMesh.rotation.x = Math.PI / 2 + 0.28;
+  collarMesh.position.set(0, 1.03, 0.04);
+  collarGroup.add(collarMesh);
+
+  // Gleaming Metallic Gold Inner Rim Piping along the Collar Edge (exact match to photo!)
+  const goldPipingGeo = new THREE.TorusGeometry(0.41, 0.022, 16, 64);
+  goldPipingGeo.scale(1.14, 0.72, 1.05);
+  const goldPipingMesh = new THREE.Mesh(goldPipingGeo, goldAccentMat);
+  goldPipingMesh.rotation.x = Math.PI / 2 + 0.28;
+  goldPipingMesh.position.set(0, 1.065, 0.055);
+  collarGroup.add(goldPipingMesh);
+
+  // Inner Back-Neck Lining Panel with Printed Size Label ('L | UK / US / EU / D')
+  const neckLabelGeo = new THREE.CylinderGeometry(
+    0.42,
+    0.44,
+    0.34,
+    32,
+    1,
+    true,
+    Math.PI * 0.65,
+    Math.PI * 0.7
+  );
+  neckLabelGeo.scale(1.1, 1, 0.62);
+  const neckLabelMat = new THREE.MeshStandardMaterial({
+    map: innerNeckTex,
+    roughness: 0.6,
+    side: THREE.DoubleSide,
+  });
+  const neckLabelMesh = new THREE.Mesh(neckLabelGeo, neckLabelMat);
+  neckLabelMesh.position.set(0, 0.94, 0.02);
+  collarGroup.add(neckLabelMesh);
+
+  group.add(collarGroup);
+  parts.push({
+    id: 'kit-collar-part',
+    layerId: 'kit-collar',
+    mesh: collarGroup,
+    basePos: new THREE.Vector3(0, 0, 0),
+    explodedPos: new THREE.Vector3(0, 0.45, 0.22),
+    baseRot: new THREE.Euler(0, 0, 0),
+    explodedRot: new THREE.Euler(0.1, 0, 0),
+    highlightMaterials: [whiteTrimMat, goldAccentMat],
+  });
+
+  // --- LAYER 4: Left & Right Raglan Sleeves with 3 White Shoulder Stripes ---
   const buildSleeve = (side: -1 | 1) => {
     const sGroup = new THREE.Group();
 
@@ -1036,23 +1261,24 @@ export function buildKitAssembly(
     const sMesh = new THREE.Mesh(tubeGeo, primaryMat);
     sGroup.add(sMesh);
 
+    // White & Gold Sleeve Cuff
     const cuffGeo = new THREE.TorusGeometry(0.22, 0.036, 14, 32);
     cuffGeo.scale(1, 0.84, 1);
-    const cuffMesh = new THREE.Mesh(cuffGeo, secondaryMat);
+    const cuffMesh = new THREE.Mesh(cuffGeo, whiteTrimMat);
     cuffMesh.position.set(side * 1.6, 0.09, 0.07);
     cuffMesh.rotation.y = side * (Math.PI / 2 - 0.55);
     cuffMesh.rotation.x = 0.45;
     sGroup.add(cuffMesh);
 
-    // Three shoulder stripes
+    // 3 Bold White Shoulder Stripes (running from collar down the shoulder ridge, matching photo!)
     for (let st = -1; st <= 1; st++) {
       const stripeCurve = new THREE.CatmullRomCurve3([
-        new THREE.Vector3(side * 0.62, 1.02, st * 0.055),
-        new THREE.Vector3(side * 1.12, 0.82, 0.03 + st * 0.055),
-        new THREE.Vector3(side * 1.46, 0.46, 0.06 + st * 0.055),
+        new THREE.Vector3(side * 0.48, 1.05, 0.02 + st * 0.065),
+        new THREE.Vector3(side * 0.88, 0.92, 0.04 + st * 0.065),
+        new THREE.Vector3(side * 1.26, 0.68, 0.06 + st * 0.065),
       ]);
-      const stripeGeo = new THREE.TubeGeometry(stripeCurve, 16, 0.016, 8, false);
-      const stripeMesh = new THREE.Mesh(stripeGeo, accentMat);
+      const stripeGeo = new THREE.TubeGeometry(stripeCurve, 16, 0.022, 8, false);
+      const stripeMesh = new THREE.Mesh(stripeGeo, whiteTrimMat);
       sGroup.add(stripeMesh);
     }
 
@@ -1068,10 +1294,10 @@ export function buildKitAssembly(
     layerId: 'kit-sleeves',
     mesh: leftSleeveGroup,
     basePos: new THREE.Vector3(0, 0, 0),
-    explodedPos: new THREE.Vector3(-0.68, 0.22, 0.15),
+    explodedPos: new THREE.Vector3(-0.62, 0.2, 0.12),
     baseRot: new THREE.Euler(0, 0, 0),
-    explodedRot: new THREE.Euler(0, 0, 0.12),
-    highlightMaterials: [primaryMat, secondaryMat],
+    explodedRot: new THREE.Euler(0, 0, 0.1),
+    highlightMaterials: [primaryMat, whiteTrimMat],
   });
 
   parts.push({
@@ -1079,62 +1305,120 @@ export function buildKitAssembly(
     layerId: 'kit-sleeves',
     mesh: rightSleeveGroup,
     basePos: new THREE.Vector3(0, 0, 0),
-    explodedPos: new THREE.Vector3(0.68, 0.22, 0.15),
+    explodedPos: new THREE.Vector3(0.62, 0.2, 0.12),
     baseRot: new THREE.Euler(0, 0, 0),
-    explodedRot: new THREE.Euler(0, 0, -0.12),
-    highlightMaterials: [primaryMat, secondaryMat],
+    explodedRot: new THREE.Euler(0, 0, -0.1),
+    highlightMaterials: [primaryMat, whiteTrimMat],
   });
 
-  // --- LAYER 4: 2x2 Ribbed Collar, Circular DFB/Atelier Crest & 4 Embroidered 3D Stars ---
-  const trimPackGroup = new THREE.Group();
+  // --- LAYER 5: FC Bayern Circular Crest + 5 Metallic Gold 3D Stars + Right Chest 3-Bar Logo + Center "T" Emblem ---
+  const chestPackGroup = new THREE.Group();
 
-  // Thick 2x2 Ribbed Crew Collar (with fine vertical rib bump map)
-  const collarGeo = new THREE.TorusGeometry(0.45, 0.088, 24, 64);
-  collarGeo.scale(1.16, 0.72, 1);
-  const collarMesh = new THREE.Mesh(collarGeo, secondaryMat);
-  collarMesh.rotation.x = Math.PI / 2 + 0.24;
-  collarMesh.position.set(0, 1.06, 0.06);
-  trimPackGroup.add(collarMesh);
-
-  // Circular Woven Crest Assembly on Chest (positioned so macro camera frames it + collar + 4 stars!)
+  // 1. Left Chest (Viewer's Right: x = +0.34, y = +0.46): Circular FC Bayern Crest + 5 Gold 3D Stars
   const crestAssembly = new THREE.Group();
-  crestAssembly.position.set(0.32, 0.46, 0.54);
-  crestAssembly.rotation.y = 0.19;
+  crestAssembly.position.set(0.34, 0.44, 0.545);
+  crestAssembly.rotation.y = 0.21;
   crestAssembly.rotation.x = -0.06;
 
-  // Disc face with high-res DFB Eagle & Circular Typography
-  const badgeDiscGeo = new THREE.CylinderGeometry(0.24, 0.24, 0.018, 64);
+  const badgeDiscGeo = new THREE.CylinderGeometry(0.22, 0.22, 0.018, 64);
   badgeDiscGeo.rotateX(Math.PI / 2);
   badgeDiscGeo.rotateZ(-Math.PI / 2);
   const badgeDisc = new THREE.Mesh(badgeDiscGeo, crestFaceMat);
   crestAssembly.add(badgeDisc);
 
-  // Raised Satin-Stitched Border Ring around the circular crest
-  const satinRimGeo = new THREE.TorusGeometry(0.24, 0.014, 16, 64);
-  const satinRim = new THREE.Mesh(satinRimGeo, secondaryMat);
+  // Raised Royal Blue Satin Stitched Border Ring
+  const satinRimGeo = new THREE.TorusGeometry(0.22, 0.015, 16, 64);
+  const satinRim = new THREE.Mesh(satinRimGeo, crestRimMat);
   satinRim.position.z = 0.008;
   crestAssembly.add(satinRim);
 
-  // 4 Faceted 3D Five-Pointed Embroidered Stars arcing diagonally above-right of the circular crest
-  // (Matching the exact arc in the user's DFB Heimtrikot 2024 reference photo!)
-  const starGeo = createFivePointStarGeometry(0.044, 0.018, 0.02);
-  const starArcAngles = [0.98, 0.68, 0.38, 0.08]; // Diagonal arc from top to right
-  const starArcRadius = 0.315;
+  // 5 Metallic Gold 3D Embroidered Stars arranged in a symmetric arch above the FC Bayern crest!
+  const starGeo = createFivePointStarGeometry(0.042, 0.017, 0.02);
+  const starArcAngles = [2.28, 1.92, 1.57, 1.22, 0.86]; // Symmetric 5-star arch centered at 90 deg (1.57 rad)
+  const starArcRadius = 0.295;
+  const starMeshes: THREE.Mesh[] = [];
 
   starArcAngles.forEach((ang, idx) => {
-    const starMesh = new THREE.Mesh(starGeo, accentMat);
+    const starMesh = new THREE.Mesh(starGeo, goldAccentMat);
     starMesh.position.set(
       Math.cos(ang) * starArcRadius,
       Math.sin(ang) * starArcRadius,
-      0.006
+      0.008
     );
-    starMesh.rotation.z = -0.15 - idx * 0.08;
+    starMesh.rotation.z = ang - Math.PI / 2;
     crestAssembly.add(starMesh);
+    starMeshes.push(starMesh);
   });
 
-  trimPackGroup.add(crestAssembly);
+  chestPackGroup.add(crestAssembly);
 
-  // Back Squad Number "10" Graphic Plate (on the back of the jersey)
+  // 2. Right Chest (Viewer's Left: x = -0.35, y = +0.46): 3D White 3-Bar Performance Logo
+  const rightLogoGroup = new THREE.Group();
+  rightLogoGroup.position.set(-0.35, 0.45, 0.54);
+  rightLogoGroup.rotation.y = -0.21;
+  rightLogoGroup.rotation.x = -0.06;
+
+  const barSpecs = [
+    { x: -0.065, y: -0.035, h: 0.09 },
+    { x: 0.0, y: 0.0, h: 0.16 },
+    { x: 0.065, y: 0.035, h: 0.23 },
+  ];
+  barSpecs.forEach((b) => {
+    const barGeo = new THREE.BoxGeometry(0.042, b.h, 0.016);
+    const barMesh = new THREE.Mesh(barGeo, whiteTpuMat);
+    barMesh.position.set(b.x, b.y, 0);
+    barMesh.rotation.z = -0.46;
+    rightLogoGroup.add(barMesh);
+  });
+  chestPackGroup.add(rightLogoGroup);
+
+  // 3. Center Chest (x = 0, y = -0.06): 3D Heat-Applied White "T" Sponsor Emblem with Digit Squares
+  const sponsorGroup = new THREE.Group();
+  sponsorGroup.position.set(-0.02, -0.05, 0.565);
+  sponsorGroup.rotation.x = 0.04;
+
+  // Vertical stem of the "T"
+  const tStem = new THREE.Mesh(
+    new THREE.BoxGeometry(0.11, 0.46, 0.015),
+    whiteTpuMat
+  );
+  // Top crossbar of the "T"
+  const tTop = new THREE.Mesh(
+    new THREE.BoxGeometry(0.38, 0.095, 0.015),
+    whiteTpuMat
+  );
+  tTop.position.set(0, 0.19, 0);
+
+  // Left & Right hanging serifs on top crossbar
+  const tSerifL = new THREE.Mesh(
+    new THREE.BoxGeometry(0.065, 0.14, 0.015),
+    whiteTpuMat
+  );
+  tSerifL.position.set(-0.16, 0.165, 0);
+  const tSerifR = new THREE.Mesh(
+    new THREE.BoxGeometry(0.065, 0.14, 0.015),
+    whiteTpuMat
+  );
+  tSerifR.position.set(0.16, 0.165, 0);
+
+  // Bottom foot serif of the "T"
+  const tFoot = new THREE.Mesh(
+    new THREE.BoxGeometry(0.21, 0.075, 0.015),
+    whiteTpuMat
+  );
+  tFoot.position.set(0, -0.2, 0);
+
+  // Flanking Telekom-style Digit Squares on left & right of stem
+  const sqGeo = new THREE.BoxGeometry(0.095, 0.095, 0.015);
+  const sqLeft = new THREE.Mesh(sqGeo, whiteTpuMat);
+  sqLeft.position.set(-0.18, -0.04, -0.01);
+  const sqRight = new THREE.Mesh(sqGeo, whiteTpuMat);
+  sqRight.position.set(0.18, -0.04, -0.01);
+
+  sponsorGroup.add(tStem, tTop, tSerifL, tSerifR, tFoot, sqLeft, sqRight);
+  chestPackGroup.add(sponsorGroup);
+
+  // 4. Back Squad Number & Player Name Plate
   const plateMat = new THREE.MeshBasicMaterial({
     map: numberTex,
     transparent: true,
@@ -1144,25 +1428,72 @@ export function buildKitAssembly(
   const backPlate = new THREE.Mesh(backPlateGeo, plateMat);
   backPlate.position.set(0, 0.08, -0.52);
   backPlate.rotation.y = Math.PI;
-  trimPackGroup.add(backPlate);
+  chestPackGroup.add(backPlate);
 
-  group.add(trimPackGroup);
+  group.add(chestPackGroup);
   parts.push({
     id: 'kit-crest-part',
     layerId: 'kit-crest',
-    mesh: trimPackGroup,
+    mesh: chestPackGroup,
     basePos: new THREE.Vector3(0, 0, 0),
-    explodedPos: new THREE.Vector3(0, 0.28, 0.68),
+    explodedPos: new THREE.Vector3(0, 0.18, 0.65),
     baseRot: new THREE.Euler(0, 0, 0),
     explodedRot: new THREE.Euler(-0.06, 0, 0),
-    highlightMaterials: [accentMat, crestFaceMat, secondaryMat],
+    highlightMaterials: [crestFaceMat, goldAccentMat, whiteTpuMat],
   });
 
+  // Dynamic Colorway & Kit Identity Switcher (Switches between FC Bayern Red/Gold, DFB White/Black, and Maestro Navy/Gold)
   const applyColorway = (preset: ColorwayPreset) => {
-    primaryMat.color.setHex(preset.primaryColor);
-    secondaryMat.color.setHex(preset.secondaryColor);
-    accentMat.color.setHex(preset.accentColor);
-    ventCoreMat.color.setHex(preset.trimColor);
+    if (preset.id === 'fcb-crimson-gold') {
+      primaryMat.map = bayernJacquard.colorMap;
+      primaryMat.bumpMap = bayernJacquard.bumpMap;
+      primaryMat.color.setHex(0xffffff);
+      primaryMat.needsUpdate = true;
+
+      crestFaceMat.map = bayernCrest.map;
+      crestFaceMat.needsUpdate = true;
+      crestRimMat.color.setHex(0x00529f);
+
+      whiteTrimMat.color.setHex(0xfafaf9);
+      goldAccentMat.color.setHex(0xd4af37);
+      goldAccentMat.metalness = 0.68;
+      whiteTpuMat.color.setHex(0xf8fafc);
+      sponsorGroup.visible = true;
+      starMeshes.forEach((s) => (s.visible = true));
+    } else if (preset.id === 'dfb-heimtrikot-white') {
+      primaryMat.map = null;
+      primaryMat.bumpMap = dfbKnitBump;
+      primaryMat.color.setHex(0xf4f4f2);
+      primaryMat.needsUpdate = true;
+
+      crestFaceMat.map = dfbCrestMap;
+      crestFaceMat.needsUpdate = true;
+      crestRimMat.color.setHex(0xe7e5e4);
+
+      whiteTrimMat.color.setHex(0xfafaf9);
+      goldAccentMat.color.setHex(0x141413);
+      goldAccentMat.metalness = 0.2;
+      whiteTpuMat.color.setHex(0x141413);
+      sponsorGroup.visible = false;
+      // Show 4 stars for DFB
+      starMeshes.forEach((s, idx) => (s.visible = idx < 4));
+    } else {
+      primaryMat.map = null;
+      primaryMat.bumpMap = bayernJacquard.bumpMap;
+      primaryMat.color.setHex(preset.primaryColor);
+      primaryMat.needsUpdate = true;
+
+      crestFaceMat.map = bayernCrest.map;
+      crestFaceMat.needsUpdate = true;
+      crestRimMat.color.setHex(0xd4af37);
+
+      whiteTrimMat.color.setHex(preset.secondaryColor);
+      goldAccentMat.color.setHex(preset.accentColor);
+      goldAccentMat.metalness = 0.65;
+      whiteTpuMat.color.setHex(preset.trimColor);
+      sponsorGroup.visible = true;
+      starMeshes.forEach((s) => (s.visible = true));
+    }
   };
 
   return { group, parts, applyColorway };
@@ -1246,7 +1577,6 @@ export function buildBallAssembly(
     })
   );
 
-  // --- LAYER 4 (INNERMOST): Carbon-Latex Bladder Core & Butyl Valve ---
   const bladderGroup = new THREE.Group();
   const bladderGeo = new THREE.SphereGeometry(0.66, 36, 36);
   const bladderMesh = new THREE.Mesh(bladderGeo, bladderMat);
@@ -1269,7 +1599,6 @@ export function buildBallAssembly(
     highlightMaterials: [bladderMat],
   });
 
-  // --- LAYER 3: Geodesic Filament Winding Matrix ---
   const carcassGeo = new THREE.IcosahedronGeometry(0.86, 2);
   const carcassMesh = new THREE.Mesh(carcassGeo, carcassMat);
   group.add(carcassMesh);
@@ -1284,7 +1613,6 @@ export function buildBallAssembly(
     highlightMaterials: [carcassMat],
   });
 
-  // --- LAYER 2: EPDM Nitrogen-Cell Foam Seam Cage ---
   const foamGroup = new THREE.Group();
   const seamBaseGeo = new THREE.IcosahedronGeometry(1.04, 1);
   const edgesGeo = new THREE.EdgesGeometry(seamBaseGeo);
@@ -1316,7 +1644,6 @@ export function buildBallAssembly(
     highlightMaterials: [foamCageMat],
   });
 
-  // --- LAYER 1 (OUTER): 20 Radially Exploding Curved Spherical Thermal Panels ---
   const ico = new THREE.IcosahedronGeometry(1.16, 0);
   const icoPos = ico.attributes.position;
 
@@ -1416,7 +1743,6 @@ export function buildBallAssembly(
     });
   }
 
-  // Dual Wind-Tunnel Slipstream Orbital Rings
   const aeroRing1 = new THREE.Mesh(
     new THREE.TorusGeometry(1.52, 0.016, 16, 80),
     panelAccentMat
@@ -1552,7 +1878,6 @@ export function buildBootAssembly(
     geo.computeVertexNormals();
   };
 
-  // --- LAYER 1: Sculpted Anatomical Boot Upper, Knit Ankle Collar & Strike Zone Ribs ---
   const upperGroup = new THREE.Group();
 
   const lastGeo = new THREE.SphereGeometry(1.0, 48, 32);
@@ -1654,7 +1979,6 @@ export function buildBootAssembly(
     highlightMaterials: [upperMat, trimMat],
   });
 
-  // --- LAYER 2: External Calcaneus Carbon Heel Lock Cradle ---
   const heelCupGroup = new THREE.Group();
   const heelCupGeo = new THREE.CylinderGeometry(
     0.33,
@@ -1690,7 +2014,6 @@ export function buildBootAssembly(
     highlightMaterials: [carbonMat, accentMat],
   });
 
-  // --- LAYER 3: Contoured Anatomical Dual-Density Insole ---
   const insoleGroup = new THREE.Group();
   const insoleShape = createFootprintShape(0.88, 0.94);
   const insoleGeo = new THREE.ExtrudeGeometry(insoleShape, {
@@ -1717,7 +2040,6 @@ export function buildBootAssembly(
     highlightMaterials: [insoleMat],
   });
 
-  // --- LAYER 4: 11-Ply Biaxial Carbon Fiber Soleplate Chassis ---
   const soleplateGroup = new THREE.Group();
   const soleShape = createFootprintShape(0.98, 1.02);
   const soleGeo = new THREE.ExtrudeGeometry(soleShape, {
@@ -1751,7 +2073,6 @@ export function buildBootAssembly(
     highlightMaterials: [carbonMat],
   });
 
-  // --- LAYER 5: 11 Bladed Chevron & Conical Titanium Studs ---
   const studsGroup = new THREE.Group();
   const studPositions: { x: number; y: number; z: number; isBlade: boolean; rotY: number }[] = [
     { x: 0.92, y: -0.21, z: 0.15, isBlade: true, rotY: 0.25 },
@@ -1876,7 +2197,6 @@ export function buildGloveAssembly(
     { name: 'pinky', x: 0.42, y: 0.26, len: 0.66, spreadZ: -0.1, rad: 0.102 },
   ];
 
-  // --- LAYER 1: 4.0mm German Contact Latex Palm & Articulated Curved Fingers ---
   const palmGroup = new THREE.Group();
 
   const palmShape = new THREE.Shape();
@@ -1967,7 +2287,6 @@ export function buildGloveAssembly(
     highlightMaterials: [latexPalmMat],
   });
 
-  // --- LAYER 2: 5 Segmented Carbon Ortho-Spine Finger Protection Rods ---
   const spinesGroup = new THREE.Group();
   fingerDefs.forEach((f) => {
     const rodGroup = new THREE.Group();
@@ -2009,7 +2328,6 @@ export function buildGloveAssembly(
     highlightMaterials: [spineCarbonMat],
   });
 
-  // --- LAYER 3: Neoprene Backhand & 3D Silicone Punch Zone ---
   const backhandGroup = new THREE.Group();
   const backGeo = new THREE.ExtrudeGeometry(palmShape, {
     depth: 0.09,
@@ -2055,7 +2373,6 @@ export function buildGloveAssembly(
     highlightMaterials: [neopreneBackMat, siliconePunchMat],
   });
 
-  // --- LAYER 4: 360° Elastic Neoprene Wrist Tunnel & Dual-Tension Strap ---
   const wristGroup = new THREE.Group();
   const tunnelGeo = new THREE.CylinderGeometry(0.46, 0.42, 0.48, 36);
   tunnelGeo.scale(1.12, 1, 0.62);

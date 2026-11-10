@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, Ruler } from 'lucide-react';
+import { X, Check, Ruler, ArrowUpRight } from 'lucide-react';
 import { Product, PitchSurface } from '../data/products';
 import { ResilientImage } from './ResilientImage';
 
@@ -160,14 +160,27 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 >
                   {product.name}
                 </h2>
-                <div className="mt-2 flex items-baseline gap-3">
-                  <span className="text-xl font-semibold text-stone-900 font-mono-tabular">
-                    ${finalUnitPrice}.00
-                  </span>
-                  {hasCustomText && (
-                    <span className="text-xs text-stone-500 font-mono-tabular">
-                      (Includes +${product.customizable.fee} Atelier Customization)
+                <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-xl font-semibold text-stone-900 font-mono-tabular">
+                      ${finalUnitPrice}.00
                     </span>
+                    {hasCustomText && (
+                      <span className="text-xs text-stone-500 font-mono-tabular">
+                        (Includes +${product.customizable.fee} Atelier Customization)
+                      </span>
+                    )}
+                  </div>
+                  {product.externalUrl && (
+                    <a
+                      href={product.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 border border-stone-200 text-xs font-semibold text-stone-800 inline-flex items-center gap-1.5 transition-colors"
+                    >
+                      <span>Tham khảo Google Shopping</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
                   )}
                 </div>
               </div>

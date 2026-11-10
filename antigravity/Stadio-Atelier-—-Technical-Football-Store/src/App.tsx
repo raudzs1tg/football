@@ -87,14 +87,14 @@ export default function App() {
   // Cart State
   const [cart, setCart] = useState<CartItemConfig[]>([
     {
-      product: PRODUCTS[4], // Veloce Carbon XI Firm-Ground
-      sizeEu: '42.5',
-      sizeDisplay: 'EU 42.5',
-      variantCode: 'FG',
-      variantName: 'Firm Ground (FG)',
+      product: PRODUCTS[0], // Áo Đá Bóng Nam adidas Sân Nhà Manchester United Fc Authentic 26/27
+      sizeEu: 'L',
+      sizeDisplay: 'EU L',
+      variantCode: PRODUCTS[0].variants[0].code,
+      variantName: PRODUCTS[0].variants[0].name,
       customName: '',
       customNumber: '',
-      unitPrice: PRODUCTS[4].price,
+      unitPrice: PRODUCTS[0].price,
       quantity: 1,
     },
   ]);
@@ -119,7 +119,7 @@ export default function App() {
   const [lastOrder, setLastOrder] = useState<ConfirmedOrder | null>(null);
 
   // Interactive Custom Studio State
-  const [studioProductId, setStudioProductId] = useState<string>('maestro-match-jersey');
+  const [studioProductId, setStudioProductId] = useState<string>(PRODUCTS[0].id);
   const [studioName, setStudioName] = useState<string>('ROSSI');
   const [studioNumber, setStudioNumber] = useState<string>('10');
   const [studioSizeIdx, setStudioSizeIdx] = useState<number>(1);
@@ -573,10 +573,22 @@ export default function App() {
               {(
                 [
                   { id: 'all', label: `Tất Cả (${PRODUCTS.length})` },
-                  { id: 'kits', label: '01. Áo Đấu (2)' },
-                  { id: 'balls', label: '02. Bóng (2)' },
-                  { id: 'boots', label: '03. Giày (3)' },
-                  { id: 'gloves', label: '04. Găng (2)' },
+                  {
+                    id: 'kits',
+                    label: `01. Áo Đấu CLB (${PRODUCTS.filter((p) => p.category === 'kits').length})`,
+                  },
+                  {
+                    id: 'balls',
+                    label: `02. Quả Bóng Đá (${PRODUCTS.filter((p) => p.category === 'balls').length})`,
+                  },
+                  {
+                    id: 'boots',
+                    label: `03. Giày Đá Bóng (${PRODUCTS.filter((p) => p.category === 'boots').length})`,
+                  },
+                  {
+                    id: 'gloves',
+                    label: `04. Găng Thủ Môn (${PRODUCTS.filter((p) => p.category === 'gloves').length})`,
+                  },
                 ] as const
               ).map((tab) => (
                 <button
@@ -661,6 +673,28 @@ export default function App() {
                           fallbackTitle={product.name}
                           fallbackSubtitle={product.subtitle}
                         />
+                        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs border border-stone-200/80 flex items-center gap-1.5 text-[11px] font-semibold text-stone-800 shadow-2xs">
+                          <span
+                            className="w-3 h-3 rounded-full border border-stone-300"
+                            style={{
+                              background: `linear-gradient(135deg, ${product.colorway3D.swatchHex} 55%, ${product.colorway3D.secondaryHex} 55%)`,
+                            }}
+                          />
+                          <span>{product.sku}</span>
+                        </div>
+                        {product.externalUrl && (
+                          <a
+                            href={product.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            title="Tham khảo trên Google Shopping"
+                            className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-stone-900/85 hover:bg-stone-950 text-white text-[11px] font-medium inline-flex items-center gap-1 backdrop-blur-xs transition-colors"
+                          >
+                            <span>Shopping</span>
+                            <ArrowUpRight className="w-3 h-3" />
+                          </a>
+                        )}
                       </div>
 
                       <div className="p-6">
